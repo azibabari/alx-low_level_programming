@@ -8,12 +8,13 @@
  */
 void print_line(int n)
 {
+int i;
 if (n <= 0)
 {
 _putchar('\n'); /* if n is 0 or less, only print a new line*/
 return;
 }
-for (int i = 0; i < n; i++)
+for (i = 0; i < n; i++)
 {
 _putchar('_'); /*print n underscores*/
 }
