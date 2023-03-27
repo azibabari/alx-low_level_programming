@@ -2,6 +2,7 @@
 #include <stdio.h>
 /**
  * _puts -  prints a string, followed by a new line, to stdout
+ * @str: holds the string
  *
  * Return: Always 0
  */
