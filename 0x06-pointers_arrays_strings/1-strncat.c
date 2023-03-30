@@ -15,15 +15,20 @@ char *result = dest; /* keep track of the start of the destination string*/
 while (*dest != '\0')
 {
 dest++;
-}   
-/* copy at most n bytes from the source string to the end of the destination string*/
+}
+/* copy at most n bytes from the source string
+ * to the end of the destination string
+ */
 while (n > 0 && *src != '\0')
 {
 *dest = *src;
 dest++;
 src++;
 n--;
-}    
-*dest = '\0'; /* add a terminating null byte to the end of the result string*/  
-return result; /* return a pointer to the resulting string*/
+}
+*dest = '\0';
+/* add a terminating null byte
+ * to the end of the result string
+ */
+return (result); /* return a pointer to the resulting string*/
 }
