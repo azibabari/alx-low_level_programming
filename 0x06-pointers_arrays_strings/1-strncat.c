@@ -16,9 +16,7 @@ while (*dest != '\0')
 {
 dest++;
 }
-/* copy at most n bytes from the source string
- * to the end of the destination string
- */
+/* copy at most n bytes from the src to end of dest*/
 while (n > 0 && *src != '\0')
 {
 *dest = *src;
@@ -27,8 +25,6 @@ src++;
 n--;
 }
 *dest = '\0';
-/* add a terminating null byte
- * to the end of the result string
- */
+/* add a terminating null byte to end of result*/
 return (result); /* return a pointer to the resulting string*/
 }
