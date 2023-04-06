@@ -1,11 +1,11 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * _sqrt_helper - Helper function to find the square root of a number recursively.
+ * _sqrt_helper - Helper function to find the sqrt of a number recursively.
  * @n: The number to find the square root of.
  * @i: The current guess.
  *
- * Return: The natural square root of the number @n, or -1 if it does not exist.
+ * Return: The natural square root of the number @n, or -1 if it does not exist
  */
 int _sqrt_helper(int n, int i)
 {
@@ -19,7 +19,7 @@ return (_sqrt_helper(n, i + 1));
  * _sqrt_recursion - Returns the natural square root of a number.
  * @n: The number to find the square root of.
  *
- * Return: The natural square root of the number @n, or -1 if it does not exist.
+ * Return: The natural square root of the number @n, or -1 if it does not exist
  */
 int _sqrt_recursion(int n)
 {
