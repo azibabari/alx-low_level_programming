@@ -14,7 +14,7 @@ ptr = malloc(b);
 if (ptr == NULL)
 {
 printf("Error: malloc failed\n");
-exit(98);
+return (98);
 }
 return (ptr);
 }
