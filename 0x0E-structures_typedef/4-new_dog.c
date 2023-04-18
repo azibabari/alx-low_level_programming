@@ -10,37 +10,32 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-dog_t *new_dog;
-char *name_copy, *owner_copy;
+dog_t *new_dog = malloc(sizeof(dog_t));
 
-/* Check for invalid input */
-if (name == NULL || owner == NULL)
-return (NULL);
-/* Allocate memory for new dog */
-new_dog = malloc(sizeof(dog_t));
 if (new_dog == NULL)
 return (NULL);
 
-/* Copy name and owner */
-name_copy = malloc(sizeof(char) * (_strlen(name) + 1));
-if (name_copy == NULL)
+/* copy the name */
+new_dog->name = malloc(strlen(name) + 1);
+if (new_dog->name == NULL)
 {
 free(new_dog);
 return (NULL);
 }
-_strcpy(name_copy, name);
-owner_copy = malloc(sizeof(char) * (_strlen(owner) + 1));
-if (owner_copy == NULL)
-{
-free(new_dog);
-free(name_copy);
-return (NULL);
-}
-_strcpy(owner_copy, owner);
+strcpy(new_dog->name, name);
 
-/* Initialize new dog */
-new_dog->name = name_copy;
+/* copy the owner */
+new_dog->owner = malloc(strlen(owner) + 1);
+if (new_dog->owner == NULL)
+{
+free(new_dog->name);
+free(new_dog);
+return (NULL);
+}
+strcpy(new_dog->owner, owner);
+
+/* set the age */
 new_dog->age = age;
-new_dog->owner = owner_copy;
+
 return (new_dog);
 }
