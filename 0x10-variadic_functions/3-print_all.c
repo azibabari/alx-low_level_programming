@@ -1,7 +1,7 @@
 #include "variadic_functions.h"
-#include <stdargh.h>
-#include <stddef.h>
 #include <stdio.h>
+#include <stddef.h>
+#include <stdarg.h>
 /**
  * print_all - Prints all of the arguments when specified
  * @format: specifies the necessary operations
